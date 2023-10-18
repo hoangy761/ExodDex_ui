@@ -5,6 +5,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Button />
+        <Button />
+        <Button />
       </header>
     </div>
   );
