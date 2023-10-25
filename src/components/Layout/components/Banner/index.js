@@ -1,5 +1,5 @@
 function Banner() {
-    return <h2>Banner component</h2>;
+    return <marquee className="border">BTC 100k$, ETH 10k$</marquee>;
 }
 
 export default Banner;

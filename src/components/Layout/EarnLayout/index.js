@@ -7,7 +7,7 @@ function EarnLayout({ children }) {
         <div>
             <Header />
             <Banner />
-            <div className="container">
+            <div>
                 <div className="content"> {children} </div>
             </div>
             <Footer />
