@@ -1,6 +1,6 @@
-import Footer from '~/components/Layout/DefaultLayout/Footer';
-import Header from '~/components/Layout/DefaultLayout/Header';
-import Banner from '~/components/Layout/DefaultLayout/Banner';
+import Footer from '~/components/Layout/components/Footer';
+import Header from '~/components/Layout/components/Header';
+import Banner from '~/components/Layout/components/Banner';
 
 function EarnLayout({ children }) {
     return (

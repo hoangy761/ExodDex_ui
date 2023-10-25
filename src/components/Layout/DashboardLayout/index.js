@@ -1,4 +1,4 @@
-import Footer from '~/components/Layout/DefaultLayout/Footer';
+import Footer from '~/components/Layout/components/Footer';
 
 function DashboardLayout({ children }) {
     return (
