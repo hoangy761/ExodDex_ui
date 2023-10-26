@@ -18,3 +18,13 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
 }
+
+.custom-input {
+    border: 1px solid #ced4da; /* Màu border ban đầu */
+    border-radius: 0.25rem; /* Kích thước bo tròn border ban đầu */
+}
+
+.custom-input:focus {
+    border: 1px solid #ced4da; /* Màu border giữ nguyên khi focus */
+    box-shadow: none; /* Loại bỏ shadow khi focus (nếu có) */
+}
