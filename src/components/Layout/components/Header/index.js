@@ -1,10 +1,6 @@
 import { Nav, Navbar, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-import classNames from 'classnames';
-import styles from './Header.module.scss';
-
-const cx = classNames.bind(styles);
 function Header() {
     return (
         <div>

@@ -4,7 +4,7 @@ import SelectTrade from '../SelectTrade';
 function SelectPool() {
     return (
         <div>
-            <div class="btn-group w-100">
+            <div className="btn-group w-100">
                 <button type="button" className="btn btn-secondary border-0">
                     Pool ELQ
                 </button>
@@ -23,14 +23,12 @@ function SelectPool() {
                     <input
                         className="form-control  bg-secondary border-0  text-white"
                         style={{ height: '2.3rem' }}
-                        value="0"
+                        defaultValue="0"
                     />
                 </div>
                 <div className="col-md-4 p-0">
-                    <select className="form-select  bg-secondary border-0  text-white">
-                        <option value="1" selected>
-                            BTC
-                        </option>
+                    <select className="form-select  bg-secondary border-0  text-white" defaultValue="1">
+                        <option value="1">BTC</option>
                         <option value="2">ETH</option>
                         <option value="3">WETH</option>
                         <option value="4">USDC</option>
@@ -49,17 +47,15 @@ function SelectPool() {
                     <input
                         className="form-control  bg-secondary border-0  text-white"
                         style={{ height: '2.3rem' }}
-                        value="0"
+                        defaultValue="0"
                     />
                 </div>
                 <div className="col-md-4 p-0">
-                    <select className="form-select  bg-secondary border-0  text-white">
+                    <select className="form-select  bg-secondary border-0  text-white" defaultValue="4">
                         <option value="1">BTC</option>
                         <option value="2">ETH</option>
                         <option value="3">WETH</option>
-                        <option value="4" selected>
-                            USDC
-                        </option>
+                        <option value="4">USDC</option>
                         <option value="5">USDT</option>
                         <option value="6">DAI</option>
                     </select>

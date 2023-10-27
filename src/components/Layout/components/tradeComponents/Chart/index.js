@@ -17,7 +17,6 @@ function Chart() {
             },
         });
     }, []);
-
     return <div id="tv_chart_container" style={{ height: '100%' }}></div>;
 }
 

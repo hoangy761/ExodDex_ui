@@ -1,25 +1,37 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function TransactionUniver() {
     const [transactions, setTransactions] = useState([]);
 
     useEffect(() => {
-        // Thay thế bằng API key của bạn
+        // Thay thế bằng API key của bạn từ etherscan.io
         const apiKey = 'BKP7KZKRV5KDY8WKD8K8M4INVND43FGMZ2';
 
-        // Địa chỉ Ethereum của bạn
-        const yourAddress = '0xff7B170219BBEDE40F575319714f61E62B26CEb5';
+        // Địa chỉ hợp đồng của token // Wrap BTC
+        const contractToken = '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599';
 
-        // Địa chỉ hợp đồng của token USDT
-        const usdtContractAddress = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
+        // Địa chỉ của tài khoản ETH mà bạn quan tâm
+        const ethAddress = '0xff7B170219BBEDE40F575319714f61E62B26CEb5';
 
-        // Hàm để lấy danh sách giao dịch của token USDT cho địa chỉ của bạn
+        // Hàm để gọi API và lấy danh sách giao dịch
         async function getUSDTTransactions() {
             try {
-                const response = await fetch(
-                    `https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=${usdtContractAddress}&address=${yourAddress}&startblock=0&endblock=99999999&sort=desc&apikey=${apiKey}`,
-                );
-                const data = await response.json();
+                // Gọi API để lấy danh sách giao dịch
+                // dinh toi ban Pro mia roi cmm ;))
+                const response = await axios.get(`https://api.etherscan.io/api`, {
+                    params: {
+                        module: 'account',
+                        action: 'txlist',
+                        address: ethAddress,
+                        contractAddress: contractToken,
+                        sort: 'desc',
+                        apikey: apiKey,
+                    },
+                });
+
+                const data = response.data;
+                console.log(data);
                 if (data.status === '1') {
                     setTransactions(data.result);
                 }

@@ -1,18 +1,16 @@
 function Footer() {
     return (
         <div
+            className="bg-secondary p-2"
             style={{
-                position: 'fixed',
-                left: 0,
-                bottom: 0,
                 width: '100%',
                 textAlign: 'center',
             }}
         >
             <div>
-                <img src="logo.png" width={50} />
+                <img src="logo.png" width={50} alt="Logo" />
             </div>
-            <label>Developed by Level Team © 2022</label>
+            <label>Developed by ExodDex Team © 2023</label>
         </div>
     );
 }

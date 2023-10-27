@@ -1,5 +1,6 @@
 import Chart from '~/components/Layout/components/tradeComponents/Chart';
 import SelectPool from '~/components/Layout/components/tradeComponents/SelectPool';
+import TokenTransactionHistory from '~/components/Layout/components/tradeComponents/TokenTransactionHistory';
 import TransactionUniver from '~/components/Layout/components/tradeComponents/TransactionUniver';
 
 function Trade() {
@@ -10,7 +11,8 @@ function Trade() {
                     <Chart />
                 </div>
                 <div>
-                    <TransactionUniver />
+                    {/* <TransactionUniver /> */}
+                    <TokenTransactionHistory />
                 </div>
             </div>
             <div className="col-md-3">
