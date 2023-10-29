@@ -8,7 +8,7 @@ function SelectTrade() {
                 <button type="button" className="btn btn-secondary ">
                     Short
                 </button>
-                <button type="button" className="btn btn-secondary ">
+                <button type="button" className="btn btn-primary ">
                     Swap
                 </button>
             </div>

@@ -9,11 +9,11 @@ function TransactionUniver() {
         const apiKey = 'BKP7KZKRV5KDY8WKD8K8M4INVND43FGMZ2';
 
         // Địa chỉ hợp đồng của token // Wrap BTC
-        const contractToken = '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599';
+        const contractAddress = '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599';
 
         // Địa chỉ của tài khoản ETH mà bạn quan tâm
         const ethAddress = '0xff7B170219BBEDE40F575319714f61E62B26CEb5';
-
+        const addressFrom = '0x05A350F9369D253B225500cB300218b61bC6a97c';
         // Hàm để gọi API và lấy danh sách giao dịch
         async function getUSDTTransactions() {
             try {
@@ -22,10 +22,10 @@ function TransactionUniver() {
                 const response = await axios.get(`https://api.etherscan.io/api`, {
                     params: {
                         module: 'account',
-                        action: 'txlist',
-                        address: ethAddress,
-                        contractAddress: contractToken,
-                        sort: 'desc',
+                        action: 'tokenbalance',
+                        contractaddress: contractAddress,
+                        address: addressFrom,
+                        tag: 'latest',
                         apikey: apiKey,
                     },
                 });
@@ -46,14 +46,7 @@ function TransactionUniver() {
     return (
         <div>
             <h1>TransactionUniver</h1>
-            <ul>
-                {transactions.map((transaction, index) => (
-                    <li key={index}>
-                        Transaction Hash: {transaction.hash}
-                        {/* Thêm các thông tin khác mà bạn muốn hiển thị */}
-                    </li>
-                ))}
-            </ul>
+            <ul></ul>
         </div>
     );
 }
